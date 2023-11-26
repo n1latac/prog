@@ -22,3 +22,10 @@ overlay.addEventListener('click', ()=>{
   modalWindow.classList.add('hidden')
   overlay.classList.add('hidden')
 })
+
+document.addEventListener('keydown', (event) => {
+  if(event.key == 'Escape' && !modalWindow.classList.contains('hidden')){
+    modalWindow.classList.add('hidden')
+    overlay.classList.add('hidden')
+  }
+})
